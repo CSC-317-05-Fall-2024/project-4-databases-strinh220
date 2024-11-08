@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Travel Guide</title>
+    <link rel="icon" href="images/japan.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <nav id="nav"></nav>
+
+    <div class="restaurants">
+        <% for (let i = 0; i < restaurants.length; i++) { %>
+            <div class="foods">
+                <div class="food" data-id="<%= restaurants[i].id %>">
+                    <img src="<%= restaurants[i].photo %>" alt="<%= restaurants[i].name %>"> 
+                    <div class="about">
+                        <a href="<%= restaurants[i].link %>">
+                            <%= restaurants[i].name %>
+                        </a>
+                        <p><%= restaurants[i].address %></p>
+                        <p><%= restaurants[i].phone ? restaurants[i].phone : 'N/A' %></p>
+                    </div>
+                    <button class="deletebtn" data-id="<%= restaurants[i].id %>"">X</button>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    
+    <footer id="footer"></footer>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/restaurantCards.js"></script>
+    
+</body>
+</html>

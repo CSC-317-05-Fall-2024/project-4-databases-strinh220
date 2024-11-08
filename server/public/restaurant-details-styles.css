@@ -1,0 +1,19 @@
+.restaurant-details {
+    margin: 30px 50px 30px 30px;
+    display: flex;
+}
+
+.restaurant-details-img { 
+    width: 400px;
+    margin-right: 30px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fae5c7;
+}
+.restaurant-title {
+    color: #96a9ff;
+}
